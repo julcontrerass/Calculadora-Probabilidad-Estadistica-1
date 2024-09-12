@@ -2,7 +2,6 @@ import math
 import os
 
 def regresionLineal():
-    os.system("cls")
     # necesitamos conocer los valores de X (independiente) e Y (dependiente)
     arrayX = []
     arrayY = []
