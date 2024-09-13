@@ -1,6 +1,7 @@
 import os
+import math
 
-def estadisticaDescriptiva():
+def estadistica_escriptiva():
     #solicitamos entrada de datos
     datos = int(input("Con cuantos datos está trabajando? "))
     #solicitamos ingreso de lista de numeros (su tamaño depende de la cantidad de datos)
@@ -9,14 +10,15 @@ def estadisticaDescriptiva():
     for i in range(datos):
         guardado = int(input(""))
         lista.append(guardado)
+    poblacional_muestral = str(input("La consigna es poblecional o muestral? (p/m):"))
     os.system("cls")
     #chequeamos cuantas veces se repite cada numero
     fi = []
     xi = []
     for i in range(datos):
-        guardaConteo = lista.count(i)
-        if guardaConteo != 0:
-            fi.append(guardaConteo)
+        guarda_conteo = lista.count(i)
+        if guarda_conteo != 0:
+            fi.append(guarda_conteo)
             xi.append(i)
     #con esos datos obtendremos los valores de xi y de fi
     print("Tabla xi:", xi)
@@ -62,12 +64,30 @@ def estadisticaDescriptiva():
         suma += fi[i] * xi[i]
     promedio = suma / datos
     print("Media aritmetica/promedio:", round(promedio,2))
-    #varianza poblacional o muestral 
+    #varianza poblacional o muestral. se hace la ((xi-xpromedio)^2 * fi)/datos (si es muestral es datos-1)
+    varianza = 0
+    
+    if poblacional_muestral == "p":
+        for i in range(tamfi):
+            varianza += ((xi[i]-promedio)**2) * fi[i]
+        varianza /= datos
+        
 
+    else:
+        for i in range(tamfi):
+            varianza += ((xi[i]-promedio)**2) * fi[i]
+        varianza /= (datos-1)
+    
+    print("La varianza es:",round(varianza,3))
+ 
+    #desvío estandar o muestral es la raiz de la varianza
+    desvio = math.sqrt(varianza)
 
-    #desvío estandar o muestral
+    print("La el desvio es:",round(desvio,3))
 
     #coeficiente de variación
+    coeficiente_variacion = (desvio/promedio) * 100
+    print("La coeficioente de vairacion es:%",round(coeficiente_variacion,3))
 
     os.system("pause")
 
