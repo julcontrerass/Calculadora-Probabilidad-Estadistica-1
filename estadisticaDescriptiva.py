@@ -10,7 +10,7 @@ def estadistica_escriptiva():
     for i in range(datos):
         guardado = int(input(""))
         lista.append(guardado)
-    poblacional_muestral = str(input("La consigna es poblecional o muestral? (p/m):"))
+    poblacional_muestral = str(input("La consigna es poblacional o muestral? (p/m):"))
     os.system("cls")
     #chequeamos cuantas veces se repite cada numero
     fi = []
@@ -51,7 +51,10 @@ def estadistica_escriptiva():
     print("Tabla Hi:",Hi)
     #moda
     moda = fi.index(max(fi))
-    print("Moda:", moda)
+    if xi[0] == 0:
+        print("Moda:", moda)
+    else:
+        print("Moda:", moda+1)
     #mediana. si es Par, entonces n/2. si es Impar, entonces (n-1)/2
     if tamfi%2 == 0:
         mediana = tamfi / 2

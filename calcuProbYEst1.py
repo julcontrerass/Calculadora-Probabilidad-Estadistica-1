@@ -1,4 +1,4 @@
-from regresionLineal import regresion_ineal
+from regresionLineal import regresion_lineal
 from estadisticaDescriptiva import estadistica_escriptiva
 
 import os
@@ -20,7 +20,7 @@ while True:
         case 2:
             os.system("cls")
             print("Calculadora regresión lineal\n")
-            regresion_ineal()
+            regresion_lineal()
         case 0:
             print("Saliendo del programa...")
             break  

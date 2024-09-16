@@ -57,21 +57,23 @@ def regresion_lineal():
     #ahora necesitamos la r al cuadrado (coeficiente de determinación)
     coeficienteDeterminacion = coeficientePearson **2
 
+    #La ordenada al origen
+
     os.system("cls")
     print(arrayX)
     print(arrayY)
     print("resultados:")
-    print("promedio de X:" , promedioX)
-    print("promedio de Y:", promedioY)
-    print("varianza de X:", varianzaX)
-    print("varianza de Y", varianzaY)
-    print("covarianza:", covarianza)
-    print("desvío de X:", desvioX)
-    print("desvío de Y:", desvioY)
-    print("pendiente:", pendiente)
-    print("ordenada:", ordenada)
-    print("coeficiente de Pearson o r:", coeficientePearson)
-    print("coeficiente de determinación o r**2:", coeficienteDeterminacion)
+    print("promedio de X:" , round(promedioX,2))
+    print("promedio de Y:", round(promedioY,2))
+    print("varianza de X:", round(varianzaX,2))
+    print("varianza de Y", round(varianzaY,2))
+    print("covarianza:", round(covarianza,2))
+    print("desvío de X:", round(desvioX,2))
+    print("desvío de Y:", round(desvioY,2))
+    print("pendiente:", round(pendiente,2))
+    print("ordenada:", round(ordenada,2))
+    print("coeficiente de Pearson o r:", round(coeficientePearson,2))
+    print("coeficiente de determinación o r**2:", round(coeficienteDeterminacion,2))
 
     os.system("pause")
 
