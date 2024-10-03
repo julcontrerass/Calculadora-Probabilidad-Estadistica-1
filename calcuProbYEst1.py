@@ -6,9 +6,9 @@ import os
 while True:
     os.system("cls")
     print("--- Menú Principal ---")
-    print("1. Calculadora estadistica descriptiva")
-    print("2. Calculadora regresión lineal")
-    print("3. Calculadora estadistica descriptiva con limites")
+    print("1. Calculadora estadística descriptiva")
+    print("2. Calculadora estadística descriptiva con limites")
+    print("3. Calculadora regresión lineal")
     print("0. Salir")
 
     opcion = int(input("Ingresa tu opción: "))
@@ -16,16 +16,16 @@ while True:
     match opcion:
         case 1:
             os.system("cls")
-            print("Calculadora de estadistica descriptiva\n")
+            print("Calculadora de estadística descriptiva\n")
             estadistica_escriptiva()
         case 2:
             os.system("cls")
-            print("Calculadora regresión lineal\n")
-            regresion_lineal()
+            print("Calculadora de estadística descriptiva con limites\n")
+            est_des_con_limites()
         case 3:
             os.system("cls")
-            print("Calculadora de estadistica descriptiva con limites\n")
-            est_des_con_limites()
+            print("Calculadora regresión lineal\n")
+            regresion_lineal()
         case 0:
             print("Saliendo del programa...")
             break  
